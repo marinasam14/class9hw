@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang= "en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+     <title>Mayoral Fundraising  </title>
+     <style>
+
+    h1 {
+        font-family: "Fira Sans Condensed", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 36px;
+        color: white;
+        text-align: center;
+        
+    }
+    body {
+        background-color: #003566;
+    }
+
+    img {
+       width: 100%
+    }
+
+    h2 { 
+        font-family: "Fira Sans Condensed", sans-serif  ;
+        font-size: 30px;
+        margin: 20px;
+        text-align: center;
+        color: #001d3d;
+    }
+
+    #container > * {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    div.photo-container {
+        max-width: 200px;
+        width: 100%;
+        background-color: #ffdb57;
+        padding: 20px;
+        border-radius: 25px;
+        padding: 20px;
+        width: 200px;
+        height: 750px;
+        margin: 50px;
+    }
+
+   p.party, p.privatefunds, p.publicfunds, p.spending{
+        font-family: "Fira Sans Condensed", sans-serif;
+        font-weight: 700;
+        font-size: 20px;
+        text-align: center;
+        color: #001d3d;
+        line-height: 1.25em;
+    }
+
+    p.balance {
+        font-family: "Fira Sans Condensed", sans-serif;
+        font-weight: 700;
+        font-size: 20px;
+        text-align: center;
+        color: #8c0000;
+    }
+
+    p.number {
+        font-family: "Crimson Text", sans-serif;
+        font-weight: 700;
+        font-size: 20px;
+        text-align: center;
+        color: 001d3d;
+    }
+    h3.party-name {
+        font-family: "Fira Sans Condensed", sans-serif;
+        font-size: 22px;
+        color: 001d3d; 
+        text-align: center;
+        margin-top: 10px;
+    }
+    .button_group {
+        margin: 20px 0;
+        color: #ffe831;
+    }
+     </style>
+</head>
+<body>
+    <h1>How Much Are the 2025 Mayoral Candidates Fundraising? </h1>
+    <!-- <h2>Remaining balance</h2> -->
+    <div class="button_group">
+        <button value="all">All</button>
+        <button value="above">Above 1 Mill</button>
+        <button value="below">Below 1 Mill</button>
+    </div>
+        <div class="party-btns">
+        <button value="all" class= "party-button"> All Parties</button>
+        <button value="democrat" class="party-button">Democrat</button>
+        <button value="Independent" class="party-button">Independent</button>
+    </div>
+    <div id="container">
+        <div class="photo-container">
+            <h2>Eric Adams</h2> 
+                <p class="party"> Independent</p>
+            <img src="images/ericadams.jpg" alt="Campaign picture of Eric Adams">
+            <p class="privatefunds"> Private Funds </p>
+                <p class="number"> $4,404,272</p>
+
+            <p class="publicfunds"> Public Funds </p>
+                <p class="number"> Not Eligible </p>
+
+            <p class="spending"> Spent So Far </p>
+                <p class="number"> $1,379,939</p>
+
+            <p class="balance">Remaining Balance </p>
+                <p class="number"> $3,024,332 </p>
+        </div>
+    </div>
+    <script>
+        const candidateData = [
+        {
+            name: 'Adrienne Adams',
+            party: 'Democrat',
+            priv: '$337,437',
+            pub: 'Not Eligible',
+            spend: '$61,180',
+            balance: '$276,256',
+            img: 'images/adrienneadams.jpg',
+            
+        },
+        {
+            name: 'Michael Blake',
+            party: 'Democrat',
+            priv: '$286,882',
+            pub: 'Not Eligible',
+            spend: '$268,571',
+            balance: '$18,311',
+            img: 'images/michaelblake.jpg'
+        },
+        {
+            name: 'Andrew Cuomo',
+            party: 'Democrat',
+            priv: '$1,516,344',
+            pub: 'Not Eligible',
+            spend: '$290,966',
+            balance: '$1,225,378',
+            img: 'images/andrewcuomo.jpg'
+        },
+        {
+            name: 'Brad Lander',
+            party: 'Democrat',
+            priv: '$1,413,648',
+            pub: '$3,724,327',
+            spend: '$1,396,409',
+            balance: '$3,741,566',
+            img: 'images/bradlander.jpeg'
+        },
+        {
+            name: 'Zohran Mamdani',
+            party: 'Democrat',
+            priv: '$1,491,837',
+            pub: '$2,859,333',
+            spend: '$678,552',
+            balance: '$3,672,618',
+            img: 'images/zohranmamdani.jpg'
+        },
+        {
+            name: 'Zellnor Myrie',
+            party: 'Democrat',
+            priv: '$785,391',
+            pub: '$2,240,993',
+            spend: '$675,360',
+            balance: '$2,351,024',
+            img: 'images/zellnormyrie.jpg'
+        },
+        {
+            name: 'Jessica Ramos',
+            party: 'Democrat',
+            priv: '$232,292',
+            pub: 'Not Eligible',
+            spend: '$232,292',
+            balance: '$1,039',
+            img: 'images/jessicaramos.jpg'
+        },
+        {
+            name: 'Scott Stringer',
+            party: 'Democrat',
+            priv: '$976,048',
+            pub: '$2,880,499',
+            spend: '$875,339',
+            balance: '$2,981,208',
+            img: 'images/scottstringer.png'
+        },
+        {
+            name: 'Jim Walden',
+            party: 'Independent',
+            priv: '$1,401,392',
+            pub: 'Not Eligible',
+            spend: '$323,711',
+            balance: '$1,077.681',
+            img: 'images/jimwalden.jpg'
+        },   
+        ];
+
+        let container = document.getElementById('container');
+
+    candidateData.forEach(function(candidate){
+        let perCard = document.createElement("div");
+
+        let balance = Number(candidate.balance.replace(/[^0-9.-]+/g, ""));
+
+        if(balance > 1000000){
+            perCard.setAttribute('data-millionaire', 'above');
+        }
+        else{
+            perCard.setAttribute('data-millionaire', 'below');
+        }
+
+        perCard.setAttribute('data-party', candidate.party.toLowerCase());
+
+        perCard.classList.add("photo-container")
+
+        perCard.innerHTML = `<h2 class="html">${candidate.name}</h2> <h3 class="party-name">${candidate.party}</h3>  <img src="${candidate.img}" alt="Campaign picture of ${candidate.name}">
+        <p class="privatefunds">Private Funds</p><p class="number">${candidate.priv}</p><p class="publicfunds">Public Funds</p><p class="number">${candidate.pub}</p><p class="spending">Spent So Far</p><p class="number">${candidate.spend}</p><p class="balance">Remaining Balance</p><p class="number">${candidate.balance}</p>`;
+
+    container.appendChild(perCard);
+           })
+
+           let buttons = document.querySelectorAll(".button_group button");
+
+           let cards = document.querySelectorAll(".photo-container");
+
+           buttons.forEach(function(btn){
+            btn.addEventListener("click", function(){
+
+                let button_value = this.value;
+
+                cards.forEach(function(card){
+                    let cardValue = card.getAttribute("data-millionaire");
+                    // let party = card.getAttribute("data-party");
+
+
+                    if(button_value == "all"){
+                        card.style.display = "inline-block";
+                    }
+                    else if(button_value == cardValue){
+                        card.style.display = "inline-block";
+                    }
+                    else{
+                        card.style.display = "none";
+                    }
+                })
+
+            })
+           })
+
+           let partybuttons = document.querySelectorAll(".party-button");
+
+           partybuttons.forEach(function(btn){
+            btn.addEventListener("click", function(){
+                
+                let party = this.value.toLowerCase();
+                let cards = document.querySelectorAll(".photo-container");
+
+                cards.forEach(function(card){
+                    let cardParty = card.getAttribute("data-party");
+
+                    if(party == "all" || party === cardParty){
+                    card.style.display = "inline-block";
+                    }
+                    else{
+                        card.style.display = "none"
+                     }
+                })  
+             });
+    });
+
+       </script>
+
+
+</body>
+
+
+
+
+
+</html>`
